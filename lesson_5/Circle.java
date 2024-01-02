@@ -12,22 +12,16 @@ public class Circle extends Figure {
         } else this.radius = radius;
     }
 
-    @Override
-    public double calculatePerimeter() {
-        return 2 * Math.PI * radius;
-    }
 
-    @Override
-    public double calculateSquare() {
-        return Math.PI * Math.pow(radius, 2);
-    }
+
+
 
     @Override
     public String toString() {
         return "Circle{" +
                 "colorLine='" + colorLine + '\'' +
                 ", colorInside='" + colorInside + '\'' + "  периметр = " +
-                this.calculatePerimeter() + "   площадь = " + this.calculateSquare() +
+                calculatePerimeter(radius) + "   площадь = " + calculateSquare(radius) +
                 '}';
     }
 }

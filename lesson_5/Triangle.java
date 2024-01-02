@@ -17,23 +17,17 @@ public class Triangle extends Figure {
         }
     }
 
-    @Override
-    public double calculatePerimeter() {
-        return a + b + c;
-    }
 
-    @Override
-    public double calculateSquare() {
-        double p = (double) (a + b + c) / 2;
-        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
-    }
+
+
+
 
     @Override
     public String toString() {
         return "Triangle{" +
                 "colorLine='" + colorLine + '\'' +
                 ", colorInside='" + colorInside + '\'' + "   периметр = " +
-                this.calculatePerimeter() + "   площадь = " + this.calculateSquare() +
+                calculatePerimeter(a,b,c) + "   площадь = " + calculateSquare(a,b,c) +
                 '}';
     }
 }

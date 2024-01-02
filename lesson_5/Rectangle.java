@@ -18,22 +18,16 @@ public class Rectangle extends Figure {
     }
 
 
-    @Override
-    public double calculateSquare() {
-        return a * b;
-    }
 
-    @Override
-    public double calculatePerimeter() {
-        return (a + b) * 2;
-    }
+
+
 
     @Override
     public String toString() {
         return "Rectangle{" +
                 "colorLine='" + colorLine + '\'' +
                 ", colorInside='" + colorInside + '\'' + "  периметр = " +
-                this.calculatePerimeter() + "   площадь = " + this.calculateSquare() +
+               calculatePerimeter(a,b) + "   площадь = " + calculateSquare(a,b) +
                 '}';
     }
 }
