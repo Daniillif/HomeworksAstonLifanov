@@ -7,9 +7,7 @@ public class Cat extends Animal {
 
 
     public Cat(String name) {
-        super();
-        this.name = name;
-        this.canRun = 200;
+        super(name,200,0);
         cat_count++;
     }
 

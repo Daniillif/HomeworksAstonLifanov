@@ -4,10 +4,7 @@ public class Dog extends Animal {
     private static int dog_count = 0;
 
     public Dog(String name) {
-        super();
-        this.name = name;
-        this.canRun = 500;
-        this.canSwim = 10;
+        super(name,500,10);
         dog_count++;
     }
 
