@@ -11,8 +11,8 @@ public class Person {
 
     //Конструктор класса должен заполнять эти поля при создании объекта.
     public Person(String fio, String position,
-                    String email, String phone,
-                    double payroll, int age) {
+                  String email, String phone,
+                  double payroll, int age) {
         this.fio = fio;
         this.position = position;
         this.email = email;
@@ -22,8 +22,8 @@ public class Person {
     }
     //Внутри класса «Сотрудник» написать метод, который выводит информацию об объекте в консоль.
 
-    public void dataOfPerson(){
-        System.out.println( "Person:" +
+    public void dataOfPerson() {
+        System.out.println("Person:" +
                 "fio='" + fio + '\'' +
                 ", position='" + position + '\'' +
                 ", email='" + email + '\'' +
@@ -31,5 +31,11 @@ public class Person {
                 ", payroll=" + payroll +
                 ", age=" + age + ";");
     }
+
+    public static void dataOfArrayPerson(Person[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i].dataOfPerson();
+        }
     }
+}
 

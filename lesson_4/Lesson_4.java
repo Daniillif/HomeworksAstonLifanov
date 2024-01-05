@@ -31,5 +31,13 @@ public class Lesson_4 {
         persArray[4] = new Person("Maslenokov Dmitriy Aleksandrovich", "C++ techLead",
                 "cccrule@vk.com", "+7999 887 77 66",
                 300000, 45);
+
+        Person.dataOfArrayPerson(persArray);
+
+        Park.Attraction attraction1 = new Park.Attraction("Hvatayka","10:00-12:00",150.0);
+        Park park = new Park("Park Pobedy", new Park.Attraction[]{attraction1});
+        System.out.println(park.toString());
+        System.out.println(attraction1.toString());
+
     }
 }
