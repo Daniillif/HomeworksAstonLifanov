@@ -31,9 +31,9 @@ public class Lesson_5 {
         Triangle triangle = new Triangle("yellow", "blue", 3, 4, 6);
         Rectangle rectangle = new Rectangle("red", "green", 2, 5);
         Circle circle = new Circle("orange", "black ", 6);
-        System.out.println(triangle.toString());
-        System.out.println(rectangle.toString());
-        System.out.println(circle.toString());
+        System.out.println(triangle);
+        System.out.println(rectangle);
+        System.out.println(circle);
     }
 
 }
