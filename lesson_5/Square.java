@@ -1,7 +1,7 @@
 package lesson_5;
 
 public interface Square {
-    public default double calculateSquare(int... num) {
+     default double calculateSquare(int... num) {
         if (num.length == 1) {
             return Math.PI * Math.pow(num[0], 2);
         } else if (num.length == 2) {

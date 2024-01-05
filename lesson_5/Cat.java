@@ -1,11 +1,8 @@
 package lesson_5;
-
 public class Cat extends Animal {
     private static int cat_count = 0;
     private boolean not_hungry;
     private int need_to_eat=10;
-
-
     public Cat(String name) {
         super(name,200,0);
         cat_count++;

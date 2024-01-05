@@ -1,7 +1,7 @@
 package lesson_5;
 
 public interface Perimeter {
-    public default double calculatePerimeter(int ... num){
+     default double calculatePerimeter(int ... num){
         if(num.length==1){
              return 2 * Math.PI * num[0];
         }else if(num.length==2){

@@ -12,6 +12,8 @@ public class Animal {
 
     public Animal(String name, int canRun, int canSwim) {
         this.name = name;
+        this.canRun = canRun;
+        this.canSwim=canSwim;
         animal_count++;
     }
 

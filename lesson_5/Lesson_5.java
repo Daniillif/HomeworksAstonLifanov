@@ -2,10 +2,6 @@ package lesson_5;
 
 public class Lesson_5 {
     public static void main(String[] args) {
-        Animal an1 = new Animal();
-        Animal an2 = new Animal();
-        Animal an3 = new Animal();
-        Animal an4 = new Animal();
         Cat cat1 = new Cat("Musa");
         Cat cat2 = new Cat("KisA");
         Cat cat3 = new Cat("lUSA");
@@ -14,11 +10,15 @@ public class Lesson_5 {
         Dog dog2 = new Dog("Boba");
         Dog dog3 = new Dog("Boba");
         Dog dog4 = new Dog("Boba");
-        System.out.println(an1.getAnimal_count());
         System.out.println(cat2.getCat_count());
         System.out.println(dog1.getDog_count());
         dog3.run(150);
         dog3.run(1000);
+        cat2.run(150);
+        cat2.run(201);
+        cat2.swim();
+        dog3.swim(12);
+        dog3.swim(9);
         Cat.Plate plate = new Cat.Plate(10);
         Cat[] cats = {cat1, cat2, cat3, cat4};
         for (Cat cat : cats) {

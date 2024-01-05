@@ -8,24 +8,19 @@ public abstract class Figure implements Perimeter,Square{
     //Попробуйте реализовать базовые методы, такие как расчет периметра фигур, в качестве дефолтных методов в интерфейсе.
 protected String colorLine;
 protected String colorInside;
-
     public Figure(String colorLine, String colorInside) {
         this.colorLine = colorLine;
         this.colorInside = colorInside;
     }
-
     public String getColorLine() {
         return colorLine;
     }
-
     public void setColorLine(String colorLine) {
         this.colorLine = colorLine;
     }
-
     public String getColorInside() {
         return colorInside;
     }
-
     public void setColorInside(String colorInside) {
         this.colorInside = colorInside;
     }

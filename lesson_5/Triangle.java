@@ -2,7 +2,6 @@ package lesson_5;
 
 public class Triangle extends Figure {
     private int a, b, c;
-
     //проверить условие на то, что сумма 2 сторон больше 3 стороны.
     public Triangle(String colorLine, String colorInside, int a, int b, int c) {
         super(colorLine, colorInside);
@@ -16,12 +15,6 @@ public class Triangle extends Figure {
             this.c = c;
         }
     }
-
-
-
-
-
-
     @Override
     public String toString() {
         return "Triangle{" +
