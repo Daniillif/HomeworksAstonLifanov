@@ -33,14 +33,6 @@ public class TelephoneCollection {
         System.out.println(Arrays.toString(this.telephoneDirectory.get(surname).toArray()));
     }
 
-    public void delete(String surname) {
-        this.telephoneDirectory.remove(surname);
-    }
-
-    public void clear() {
-        this.telephoneDirectory.clear();
-    }
-
     public void deleteLast(String surname) {
         if (this.telephoneDirectory.containsKey(surname)) {
             this.telephoneDirectory.get(surname).remove(this.telephoneDirectory.get(surname).size() - 1);
