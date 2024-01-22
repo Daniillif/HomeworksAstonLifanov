@@ -41,5 +41,10 @@ public class Box <T extends Fruit>{
             System.out.println("Коробки равны");
         return true;
     }
+    public void sprinkleToBox(Box<T> box){
+        box.getBox().addAll(this.getBox());
+        this.getBox().clear();
+        System.out.println("Теперь в коробке " + box.getWeight() + " вес и колво " + box.getBox().size());
+    }
 
 }
