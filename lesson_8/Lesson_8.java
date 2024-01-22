@@ -34,15 +34,8 @@ public class Lesson_8 {
     }
 
     public static void countOfFruits(String[] words) {
-        Map<String, Integer> map = new HashMap<>();
-        for (int i = 0; i < words.length; i++) {
-            if (!map.containsKey(words[i])) {
-                map.put(words[i], 1);
-            } else {
-                map.put(words[i], map.get(words[i]) + 1);
-            }
-        }
-        map.forEach((key, value) -> System.out.printf("Такого фрукта - %s в списке слов :%d шт  \n", key, value));
+        TreeSet<String> set = new TreeSet<>(Arrays.asList(words));
+        set.stream().forEach(x-> System.out.println(x + " встречается в уникальной коллекции 1 раз"));
     }
 }
 
