@@ -30,7 +30,7 @@ public class Box <T extends Fruit>{
             return this.box.size()*weight;
         }
     }
-    public boolean compare(Box<?> compairingBox){
+    public boolean compare(Box<? extends Fruit> compairingBox){
         if(this.getWeight()<compairingBox.getWeight()){
             System.out.println("Передаваемая коробка больше нашей");
             return false;
