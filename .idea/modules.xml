@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/HomeworksAstonLifanov.iml" filepath="$PROJECT_DIR$/.idea/HomeworksAstonLifanov.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson_11_gradle.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson_11_gradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson_11_gradle.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson_11_gradle.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson_11_gradle.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson_11_gradle.test.iml" />
     </modules>
   </component>
 </project>
