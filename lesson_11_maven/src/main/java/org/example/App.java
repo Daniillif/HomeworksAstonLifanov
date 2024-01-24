@@ -1,4 +1,4 @@
-package org.example;
+package lesson_11_maven.src.main.java.org.example;
 
 /**
  * Hello world!
