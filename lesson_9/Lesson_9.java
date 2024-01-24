@@ -28,9 +28,8 @@ public class Lesson_9 {
         System.out.println(Arrays.toString(strings));
         System.out.println(Arrays.toString(strings2));
         //задание 4
-        int sum = students.stream().filter(x -> x.getGender() == Gender.MAN).
-                reduce(0, (x, y) -> x + y.getAge(),
-                        Integer::sum);
+        int sum = students.stream().filter(x -> x.getGender() == Gender.MAN).map(Student::getAge).
+                reduce(0, Integer::sum);
         int count = (int) students.stream().filter(x -> x.getGender() == Gender.MAN).count();
         System.out.println("Средний возраст студентов мужского пола = " + sum / count);
         System.out.println("Студенты кому грозит повестка в этом году:");
