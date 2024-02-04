@@ -1,38 +1,23 @@
 package org.example;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+public class AppTest {
+    @ParameterizedTest
+    @CsvSource({"1,1", "5,120", "3,6", "10,3628800"})
+    void getFactorial(int a, int b) {
+        Assertions.assertEquals(b, App.getFactorial(a));
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    void assertGroup() {
+        int[] numbers = {1, 5, 3, 10};
+        Assertions.assertAll("numbers", () -> Assertions.assertEquals(1, App.getFactorial(numbers[0])),
+                () -> Assertions.assertEquals(120, App.getFactorial(numbers[1])),
+                () -> Assertions.assertEquals(6, App.getFactorial(numbers[2])),
+                () -> Assertions.assertEquals(3628800, App.getFactorial(numbers[3])));
     }
 }
