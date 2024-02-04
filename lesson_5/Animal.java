@@ -1,10 +1,10 @@
 package lesson_5;
 
 public class Animal {
-    protected String name;
-    protected int canRun;
-    protected int canSwim;
-    protected static int animal_count = 0;
+    public String name;
+    public int canRun;
+    public int canSwim;
+    public static int animal_count = 0;
 
     public Animal() {
         animal_count++;
