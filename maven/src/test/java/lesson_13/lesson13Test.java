@@ -35,7 +35,7 @@ public class lesson13Test {
     }
     @AfterEach
     void close(){
-        driver.close();
+        driver.quit();
     }
     @Test
     void testName() {
