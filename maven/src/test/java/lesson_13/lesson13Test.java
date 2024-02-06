@@ -59,6 +59,7 @@ public class lesson13Test {
     @Test
     void testClickUrl() {
         driver.findElement(By.linkText("Подробнее о сервисе")).click();
+        Assertions.assertEquals(driver.getCurrentUrl(),"https://www.mts.by/help/poryadok-oplaty-i-bezopasnost-internet-platezhey/");
         System.out.println("тест на клик пройден");
     }
     @Test
