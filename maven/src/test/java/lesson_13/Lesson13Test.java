@@ -2,7 +2,6 @@ package lesson_13;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebElement;
@@ -10,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class lesson13Test {
+public class Lesson13Test {
     //Необходимо написать автотесты для сайта mts.by. Суть тестов заключается в проверке блока «Онлайн пополнение без комиссии»:
     //Проверить название указанного блока;
     // Проверить наличие логотипов платёжных систем;
