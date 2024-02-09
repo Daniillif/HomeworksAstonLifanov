@@ -34,7 +34,7 @@ public class Lesson14Test extends Assert {
     List<String> text3 = new ArrayList<>(Arrays.asList("Номер счета на 2073", "Сумма", "E-mail для отправки чека"));
 
     @BeforeSuite
-    static void setupAll() {
+    void setupAll() {
         WebDriverManager.chromedriver().setup();
     }
 
