@@ -45,32 +45,24 @@ public class Lesson15Test {
 
     @Test
     void testBasket() throws InterruptedException {
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div[2]/div/article[1]/div/div[3]/p[3]/a")).click();
-        Thread.sleep(2000);
         try {
-            driver.findElement(By.xpath("/html/body/div[1]/div/ul/li[2]")).click();
+            driver.findElement(By.xpath("//a[@class='product-card__add-basket j-add-to-basket btn-main']")).click();
+            driver.findElement(By.xpath("//span[text()=\"L\"]")).click();
         }catch (NoSuchElementException exception){
             System.out.println("бузразмерный");
         }
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div[2]/div/article[2]/div/div[3]/p[3]/a")).click();
-        Thread.sleep(2000);
         try {
-            driver.findElement(By.xpath("/html/body/div[1]/div/ul/li[2]")).click();
+            driver.findElement(By.xpath("//a[@class='product-card__add-basket j-add-to-basket btn-main']")).click();
+            driver.findElement(By.xpath("//span[text()=\"L\"]")).click();
         }catch (NoSuchElementException exception){
             System.out.println("бузразмерный");
         }
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div[2]/div/article[3]/div/div[3]/p[3]/a")).click();
-        Thread.sleep(2000);
         try {
-            driver.findElement(By.xpath("/html/body/div[1]/div/ul/li[2]")).click();
+            driver.findElement(By.xpath("//a[@class='product-card__add-basket j-add-to-basket btn-main']")).click();
+            driver.findElement(By.xpath("//span[text()=\"L\"]")).click();
         }catch (NoSuchElementException exception){
             System.out.println("бузразмерный");
         }
-
-        //  /html/body/div[1]
-        // /html/body/div[1]
     }
-
-
 }
 
