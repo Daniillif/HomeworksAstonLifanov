@@ -13,7 +13,7 @@ import java.util.List;
 public class MainPage {
     static WebDriver driver = new ChromeDriver();
     String pathMain = "https://www.wildberries.ru/";
-    static List<ElementPage> listOfElements=  new ArrayList<>();
+    static List<ElementPage> listOfElements = new ArrayList<>();
     static String btnToAdd = "//a[@class='product-card__add-basket j-add-to-basket btn-main']";
     static String lowestPrise = "//ins[@class='price__lower-price wallet-price']";
     static String sizeL = "//span[@class='sizes-list__size']";
@@ -21,7 +21,8 @@ public class MainPage {
     public MainPage() {
 
     }
-    public void goToMainPage(){
+
+    public void goToMainPage() {
         driver.get(pathMain);
     }
 
@@ -31,9 +32,9 @@ public class MainPage {
                 Thread.sleep(2000);
                 driver.findElement(By.xpath(btnToAdd)).click();
                 Thread.sleep(1000);
-                String name = driver.findElement(By.xpath("(//span[@class='product-card__name'])["+ i + "]")).getAttribute("textContent").replaceAll("[^A-Za-zА-Яа-я0-9]", "");
+                String name = driver.findElement(By.xpath("(//span[@class='product-card__name'])[" + i + "]")).getAttribute("textContent").replaceAll("[^A-Za-zА-Яа-я0-9]", "");
                 Thread.sleep(1000);
-                String prise = driver.findElement(By.xpath("("+lowestPrise+ ")["+ i + "]")).getAttribute("textContent").replaceAll("[^0-9]", "");
+                String prise = driver.findElement(By.xpath("(" + lowestPrise + ")[" + i + "]")).getAttribute("textContent").replaceAll("[^0-9]", "");
                 Thread.sleep(1000);
                 listOfElements.add(new ElementPage(name, prise));
                 Thread.sleep(1500);
@@ -49,5 +50,11 @@ public class MainPage {
         for (ElementPage listOfElement : listOfElements) {
             System.out.println(listOfElement.name + " " + listOfElement.prise);
         }
+    }
+    public static double returnSumOfPrises(){
+        int result = 0;
+        for (ElementPage element : MainPage.listOfElements) {
+            result+=Integer.parseInt(element.prise);
+        }return Math.ceil(result*1.031);
     }
 }

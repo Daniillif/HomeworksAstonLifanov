@@ -14,15 +14,17 @@ public class BasketPage {
 
     public BasketPage() {
     }
-    public void goToBasket(){
+
+    public void goToBasket() {
         driver.get(path);
     }
+
     public List<ElementPage> getElementsOfBasket() throws InterruptedException {
         List<ElementPage> elementPageList = new ArrayList<>();
         for (int i = 3; i >= 1; i--) {
             Thread.sleep(2000);
-            String name = driver.findElement(By.xpath("(//span[@class='good-info__good-name'])["+ i + "]")).getAttribute("textContent").replaceAll("[^A-Za-zА-Яа-я0-9]", "").strip();
-            String prise = driver.findElement(By.xpath("(//div[@class='list-item__price-new'])["+ i + "]")).getAttribute("textContent").replaceAll("[^0-9]", "").strip();
+            String name = driver.findElement(By.xpath("(//span[@class='good-info__good-name'])[" + i + "]")).getAttribute("textContent").replaceAll("[^A-Za-zА-Яа-я0-9]", "").strip();
+            String prise = driver.findElement(By.xpath("(//div[@class='list-item__price-new'])[" + i + "]")).getAttribute("textContent").replaceAll("[^0-9]", "").strip();
             elementPageList.add(new ElementPage(name, prise));
         }
         for (ElementPage elementPage : elementPageList) {
