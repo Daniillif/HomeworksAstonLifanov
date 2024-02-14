@@ -52,11 +52,14 @@ public class Lesson15Test {
         List<ElementPage> listOfBasket = basketPage.getElementsOfBasket();
         for (int i = 0; i < listOfBasket.size(); i++) {
             System.out.println("Сравниваем " + MainPage.listOfElements.get(i).name + " и " + listOfBasket.get(i).name);
-            System.out.println("Сравниваем " + Math.ceil(Integer.parseInt(MainPage.listOfElements.get(i).prise) * 1.031) + " и " + Integer.parseInt(listOfBasket.get(i).prise));
+            System.out.println("Сравниваем " + Math.ceil(Integer.parseInt(MainPage.listOfElements.get(i).prise) * 1.03099) + " и " + Integer.parseInt(listOfBasket.get(i).prise));
             Assertions.assertEquals(MainPage.listOfElements.get(i).name, listOfBasket.get(i).name);
             Assertions.assertEquals(Math.ceil(Integer.parseInt(MainPage.listOfElements.get(i).prise) * 1.03099), Integer.parseInt(listOfBasket.get(i).prise));
         }
 
+
+    }@Test
+    void checkBasketSum(){
         double result = MainPage.returnSumOfPrises();
         System.out.println("Общая сумма товаров из списка добавленных с главной страницы" + result);
         System.out.println("Общая сумма товара в корзине " + new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[@class='b-right']")))).getAttribute("textContent"));
