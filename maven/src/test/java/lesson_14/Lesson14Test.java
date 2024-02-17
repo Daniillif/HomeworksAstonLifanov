@@ -119,10 +119,10 @@ public class Lesson14Test extends Assert {
         Assertions.assertEquals(driver.findElement(By.cssSelector("body > app-root > div > div > app-payment-container > section > app-card-page > div > div.card-page__card > app-card-input > form > div.card.ng-tns-c53-0 > div:nth-child(2) > div.cvc-input.ng-tns-c53-0.ng-star-inserted > app-input > div > div > div.content.ng-tns-c47-5 > label")).getAttribute("textContent"),"CVC");
         Assertions.assertEquals(driver.findElement(By.cssSelector("body > app-root > div > div > app-payment-container > section > app-card-page > div > div.card-page__card > app-card-input > form > div.card.ng-tns-c53-0 > div:nth-child(3) > app-input > div > div > div.content.ng-tns-c47-3 > label")).getAttribute("textContent"),"Имя держателя (как на карте)");
         //иконки
-        driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/img[1]")).isDisplayed();
-        driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/img[2]")).isDisplayed();
-        driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/img[3]")).isDisplayed();
-        driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/div")).isDisplayed();
+        Assertions.assertTrue(driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/img[1]")).isDisplayed());
+        Assertions.assertTrue(driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/img[2]")).isDisplayed());
+        Assertions.assertTrue( driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/img[3]")).isDisplayed());
+        Assertions.assertTrue(driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/div")).isDisplayed());
     }
 }
 
