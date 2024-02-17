@@ -44,8 +44,6 @@ public class Lesson13Test {
         }else
             System.out.println("тест на поиск названия не пройден");
         }
-
-
     @Test
     void testPartners() {
         String xpath = "//*[@id=\"pay-section\"]/div/div/div[2]/section/div";
