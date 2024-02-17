@@ -8,18 +8,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasketPage {
-    static WebDriver driver = MainPage.driver;
     static String path = "https://www.wildberries.ru/lk/basket";
 
 
     public BasketPage() {
     }
 
-    public static void goToBasket() {
+    public static void goToBasket(WebDriver driver) {
         driver.get(path);
     }
 
-    public static List<ElementPage> getElementsOfBasketTest() throws InterruptedException {
+    public static List<ElementPage> getElementsOfBasketTest(WebDriver driver) throws InterruptedException {
         List<ElementPage> elementPageList = new ArrayList<>();
         for (int i = 3; i >= 1; i--) {
             WebElement el1 = driver.findElement(By.xpath("(//span[@class='good-info__good-name'])[" + i + "]"));

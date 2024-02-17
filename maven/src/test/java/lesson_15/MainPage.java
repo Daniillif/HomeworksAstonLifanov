@@ -1,19 +1,16 @@
 package lesson_15;
-
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 public class MainPage {
-    static WebDriver driver = new ChromeDriver();
     static String pathMain = "https://www.wildberries.ru/";
     static List<ElementPage> listOfElements = new ArrayList<>();
     static String btnToAdd = "//a[@class='product-card__add-basket j-add-to-basket btn-main']";
@@ -23,11 +20,11 @@ public class MainPage {
     public MainPage() {
     }
 
-    public static void goToMainPage() {
+    public static void goToMainPage(@NotNull WebDriver driver) {
         driver.get(pathMain);
     }
 
-    public static void addToBasket_3_Elements() {
+    public static void addToBasket_3_Elements(WebDriver driver) {
         for (int i = 1; i < 4; i++) {
             try {
                 WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));

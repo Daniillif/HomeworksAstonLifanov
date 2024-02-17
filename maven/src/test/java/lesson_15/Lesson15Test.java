@@ -4,12 +4,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
-
 import java.time.Duration;
 import java.util.List;
 
@@ -39,11 +37,11 @@ public class Lesson15Test {
     }
 
     @Test
-    public void compareBasketAndMainInfoTest() throws InterruptedException {
-        MainPage.goToMainPage();
-        MainPage.addToBasket_3_Elements();
-        BasketPage.goToBasket();
-        List<ElementPage> listOfBasket = BasketPage.getElementsOfBasketTest();
+     void compareBasketAndMainInfoTest() throws InterruptedException {
+        MainPage.goToMainPage(driver);
+        MainPage.addToBasket_3_Elements(driver);
+        BasketPage.goToBasket(driver);
+        List<ElementPage> listOfBasket = BasketPage.getElementsOfBasketTest(driver);
         for (int i = 0; i < listOfBasket.size(); i++) {
             System.out.println("Сравниваем " + MainPage.listOfElements.get(i).name + " и " + listOfBasket.get(i).name);
             System.out.println("Сравниваем " + Math.ceil(Integer.parseInt(MainPage.listOfElements.get(i).prise) * 1.03099) + " и " + Integer.parseInt(listOfBasket.get(i).prise));

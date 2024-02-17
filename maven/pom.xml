@@ -47,10 +47,11 @@
       <artifactId>selenium-api</artifactId>
       <version>4.17.0</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
-      <version>5.4.1</version>
+      <version>5.6.3</version>
     </dependency>
     <dependency>
       <groupId>org.testng</groupId>
@@ -58,6 +59,12 @@
       <version>7.8.0</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>org.jetbrains</groupId>
+          <artifactId>annotations</artifactId>
+          <version>13.0</version>
+          <scope>compile</scope>
+      </dependency>
   </dependencies>
   <build>
     <plugins>
