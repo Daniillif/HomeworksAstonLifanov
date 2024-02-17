@@ -22,6 +22,8 @@ public class Lesson15Test {
 
     @BeforeSuite
     void setupAll() {
+        WebDriverManager.chromedriver().clearDriverCache().setup();
+        WebDriverManager.chromedriver().clearResolutionCache().setup();
         WebDriverManager.chromedriver().setup();
     }
 
