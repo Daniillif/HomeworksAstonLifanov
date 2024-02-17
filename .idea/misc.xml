@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/lesson_11_maven/pom.xml" />
         <option value="$PROJECT_DIR$/maven_lesson_11/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
