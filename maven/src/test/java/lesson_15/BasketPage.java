@@ -8,23 +8,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasketPage {
-    WebDriver driver = MainPage.driver;
-    String path = "https://www.wildberries.ru/lk/basket";
+    static WebDriver driver = MainPage.driver;
+    static String path = "https://www.wildberries.ru/lk/basket";
 
 
     public BasketPage() {
     }
 
-    public void goToBasket() {
+    public static void goToBasket() {
         driver.get(path);
     }
 
-    public List<ElementPage> getElementsOfBasket() throws InterruptedException {
+    public static List<ElementPage> getElementsOfBasketTest() throws InterruptedException {
         List<ElementPage> elementPageList = new ArrayList<>();
         for (int i = 3; i >= 1; i--) {
-            Thread.sleep(2000);
-            String name = driver.findElement(By.xpath("(//span[@class='good-info__good-name'])[" + i + "]")).getAttribute("textContent").replaceAll("[^A-Za-zА-Яа-я0-9]", "").strip();
-            String prise = driver.findElement(By.xpath("(//div[@class='list-item__price-new'])[" + i + "]")).getAttribute("textContent").replaceAll("[^0-9]", "").strip();
+            WebElement el1 = driver.findElement(By.xpath("(//span[@class='good-info__good-name'])[" + i + "]"));
+            String name =el1.getAttribute("textContent").replaceAll("[^A-Za-zА-Яа-я0-9]", "").strip();
+            WebElement el2 = driver.findElement(By.xpath("(//div[@class='list-item__price-new'])[" + i + "]"));
+            String prise = el2.getAttribute("textContent").replaceAll("[^0-9]", "").strip();
             elementPageList.add(new ElementPage(name, prise));
         }
         for (ElementPage elementPage : elementPageList) {

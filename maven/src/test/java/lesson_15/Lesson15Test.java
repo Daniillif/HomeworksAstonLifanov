@@ -33,33 +33,25 @@ public class Lesson15Test {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
-
     @AfterMethod
     void close() {
         driver.quit();
     }
 
     @Test
-    public void compareBasketAndMainInfo() throws InterruptedException {
-        MainPage mainPage = new MainPage();
-        mainPage.goToMainPage();
-        Thread.sleep(2000);
+    public void compareBasketAndMainInfoTest() throws InterruptedException {
+        MainPage.goToMainPage();
         MainPage.addToBasket_3_Elements();
-        BasketPage basketPage = new BasketPage();
-        Thread.sleep(2000);
-        basketPage.goToBasket();
-        Thread.sleep(2000);
-        List<ElementPage> listOfBasket = basketPage.getElementsOfBasket();
+        BasketPage.goToBasket();
+        List<ElementPage> listOfBasket = BasketPage.getElementsOfBasketTest();
         for (int i = 0; i < listOfBasket.size(); i++) {
             System.out.println("Сравниваем " + MainPage.listOfElements.get(i).name + " и " + listOfBasket.get(i).name);
             System.out.println("Сравниваем " + Math.ceil(Integer.parseInt(MainPage.listOfElements.get(i).prise) * 1.03099) + " и " + Integer.parseInt(listOfBasket.get(i).prise));
             Assertions.assertEquals(MainPage.listOfElements.get(i).name, listOfBasket.get(i).name);
             Assertions.assertEquals(Math.ceil(Integer.parseInt(MainPage.listOfElements.get(i).prise) * 1.03099), Integer.parseInt(listOfBasket.get(i).prise));
         }
-
-
     }@Test
-    void checkBasketSum(){
+    void checkBasketSumTest(){
         double result = MainPage.returnSumOfPrises();
         System.out.println("Общая сумма товаров из списка добавленных с главной страницы" + result);
         System.out.println("Общая сумма товара в корзине " + new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[@class='b-right']")))).getAttribute("textContent"));
