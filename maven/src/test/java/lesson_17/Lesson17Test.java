@@ -93,10 +93,10 @@ public class Lesson17Test {
     @Test
     @Order(4)
     @Step
-    @DisplayName("Test devide")
+    @DisplayName("Test divide")
     @Owner("Daniil Lifanov")
     @Attachment(value = "Вложение", type = "application/json", fileExtension = ".txt")
-    void checkCalculateDevideTest(){
+    void checkCalculateDivideTest(){
         initialize();
         driver.pressKey(new KeyEvent(AndroidKey.HOME));
         driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"Calculator\"]")).click();
@@ -105,10 +105,10 @@ public class Lesson17Test {
                 "//android.widget.ImageButton[@content-desc=\"9\"]")).click();
 
         driver.findElement(By.xpath("\t\n" +
-                "//android.widget.ImageButton[@content-desc=\"minus\"]")).click();
+                "//android.widget.ImageButton[@content-desc=\"divide\"]")).click();
         driver.findElement(By.xpath("\t\n" +
                 "//android.widget.ImageButton[@content-desc=\"3\"]")).click();
         driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"equals\"]")).click();
-        Assertions.assertEquals("6", driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.google.android.calculator:id/result_final\"]")).getText());
+        Assertions.assertEquals("3", driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.google.android.calculator:id/result_final\"]")).getText());
     }
 }
